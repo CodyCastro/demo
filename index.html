@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>инструкция</title>
+	<style>
+		/* Basic styles for readability */
+		body {
+			font-family: sans-serif;
+			max-width: 800px;
+			margin: 2em auto;
+			padding: 0 1em;
+			line-height: 1.6;
+		}
+		img { max-width: 100%; height: auto; }
+		pre { background-color: #f4f4f4; padding: 1em; overflow-x: auto; }
+		code { font-family: monospace; }
+	</style>
+</head>
+<body>
+	<h3>!! В РЕДОСе всё предварительно установленно и настроенно !!</h3>
+<h1>Модуль 1</h1>
+<h3>1) Откройте терминал и введите это:</h3>
+<pre><code>sudo -i
+</code></pre>
+<p>пароль student</p>
+<h3>2) Создаём папку для приложения, а также для бд и даём права на неё</h3>
+<p>на всякий случай, перед созданием удалим:</p>
+<pre><code>rm -fr /db /home/student/DemoApp
+</code></pre>
+<p>теперь создаём:</p>
+<pre><code>mkdir /home/student/DemoApp
+mkdir /db
+chown reddatabase /db
+</code></pre>
+<h3>3) Клонируем репозитории</h3>
+<p><code>1 смена:</code></p>
+<pre><code>git clone https://github.com/igorten21/DemoApp.git /home/student/DemoApp
+git clone https://github.com/igorten21/db1.git /db
+</code></pre>
+<p><code>2 смена:</code></p>
+<pre><code>git clone https://github.com/igorten21/DemoApp.git /home/student/DemoApp
+gitclone https://github.com/igorten21/db2.git /db
+</code></pre>
+<h3>4) Открываем RedExpert для проверки</h3>
+<p>Для проверки нужно:</p>
+<ol>
+<li>
+<p>создать подключение - кнопка New Connection
+<img src="image/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F/1780675401747.png" alt="1780675401747"></p>
+</li>
+<li>
+<p>Ввести указанные настройки</p>
+</li>
+</ol>
+<p>Connection Name: <code>demo</code></p>
+<p>Database File: <code>/db/demo.fdb</code></p>
+<p>User Name: <code>sysdba</code></p>
+<p>Password: <code>12345678 (либо student)</code></p>
+<p>ЗАТЕМ НАЖАТЬ <code>Save</code> И ЗАТЕМ <code>Connect</code></p>
+<p><img src="image/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F/1780675661172.png" alt="1780675661172"></p>
+<h3>5) Смотрим таблицы и т.д (делайте умный вид, бд уже вся готовая)</h3>
+<h3>6) Заходим в VSCode, в левом верхнем углу жмём File, затем Open Folder, затем ищем папку DemoApp и снизу кнопка открыть</h3>
+<h3>7) Прописываем в VSCode терминале</h3>
+<pre><code>dotnet run
+</code></pre>
+<p>Всё должно работать, проверяйте</p>
+<h3>8) Делайте умный вид или исправляйте мои ошибки</h3>
+
+</body>
+</html>

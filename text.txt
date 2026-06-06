@@ -1,0 +1,18 @@
+sudo -i
+rm -fr /db /home/student/DemoApp
+mkdir /home/student/DemoApp
+mkdir /db
+chown reddatabase /db
+git clone https://github.com/igorten21/DemoApp.git /home/student/DemoApp
+gitclone https://github.com/igorten21/db2.git /db
+new connection
+demo
+/db/demo.fdb
+sysdba
+student
+save connect (chown reddatabase /db/demo.fdb)
+dotnet run
+
+sudo chmod 777 -R /home/student/DemoApp
+cd /home/student/DemoApp
+sudo chmod -R 777 obj
